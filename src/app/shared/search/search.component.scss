@@ -1,0 +1,34 @@
+@import "../../sass/variables.scss";
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background: $white;
+
+  .search_input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    &::placeholder {
+      font-weight: 600;
+      color: $gray;
+      text-align: left;
+    }
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+    background: transparent;
+  }
+}
