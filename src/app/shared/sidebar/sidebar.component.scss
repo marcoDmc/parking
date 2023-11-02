@@ -1,0 +1,75 @@
+@import "../../sass/variables.scss";
+.sidebar {
+  display: grid;
+  place-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  padding: 1rem;
+  .title {
+    width: 100%;
+    font-size: 2rem;
+    color: $blue;
+    text-transform: capitalize;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      max-width: 200px;
+      height: 2px;
+      background-color: $blue_light;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+  .wrapper {
+    width: 100%;
+    min-height: 500px;
+    height: auto;
+    display: grid;
+    justify-content: start;
+    place-items: center;
+    .menu {
+      color: $red_light;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      height: auto;
+      width: 100%;
+    }
+
+    .list {
+      height: 100%;
+      display: grid;
+      place-items: center;
+      justify-content: center;
+
+      li {
+        width: 100%;
+        font-weight: 600;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 10px;
+
+        cursor: pointer;
+        &:hover {
+          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          background-color: $blue;
+          padding: 10px;
+          border-radius: 8px;
+          color: $white;
+          scale: 1.1;
+        }
+
+        &::first-letter {
+          text-transform: capitalize !important;
+        }
+      }
+    }
+  }
+}
