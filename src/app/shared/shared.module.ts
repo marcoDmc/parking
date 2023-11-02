@@ -8,6 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
 import { SettingsComponent } from './settings/settings.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { SettingsComponent } from './settings/settings.component';
     NotFoundComponent,
     NotificationComponent,
     SearchComponent,
-    SettingsComponent
+    SettingsComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
