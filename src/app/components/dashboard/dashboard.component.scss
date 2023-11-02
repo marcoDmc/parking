@@ -1,0 +1,36 @@
+@import "../../sass/variables.scss";
+
+.dashboard {
+  height: calc(100vh / 1);
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 2;
+  grid-template-areas:
+    "sidebar sidebar search" "sidebar sidebar main"
+    "sidebar sidebar main";
+  gap: 0;
+  place-items: start;
+  overflow: hidden;
+  place-items: start;
+
+  .sidebar {
+    border: 2px solid black;
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+    grid-area: sidebar;
+  }
+  .search {
+    grid-area: search;
+    width: 100%;
+    max-width: calc(100vw / 1.2);
+    padding: 1.5rem;
+    display: flex;
+  }
+  main {
+    grid-area: main;
+    width: 100vw;
+    height: 100vh;
+  }
+}
