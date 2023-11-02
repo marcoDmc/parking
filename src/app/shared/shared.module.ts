@@ -7,6 +7,7 @@ import { HelpComponent } from './help/help.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { NotificationComponent } from './notification/notification.component';
 import { SearchComponent } from './search/search.component';
+import { SettingsComponent } from './settings/settings.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SearchComponent } from './search/search.component';
     HelpComponent,
     NotFoundComponent,
     NotificationComponent,
-    SearchComponent
+    SearchComponent,
+    SettingsComponent
   ],
   imports: [
     CommonModule,
