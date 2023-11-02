@@ -1,27 +1,46 @@
 # Parking
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
+`The WEX Bootcamp in the DIO.io platform proposes a project to build a system to monitor and manage a parking lot.`
 
-## Development server
+- O desafio requer que o desenvolvedor(a), desenvolva um gerenciador de estacionamento , com funcionalidades como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos e correlacionados
+- a API contém altentificação de rotas, como também de login de usuário , cadastramento de novos veículos , pesquisa sobre vagas disponíveis em estacionamentos próximos, além de parte financeira que ira lidar com compras , valores das vagas
+- A parte de altentificação tem a responsabilidade de monitorar o usuário logado e verificar se o mesmo tem a permissão de acessar determinada rota ou efetuar determinada ação como por exemplo a deleção de algum veiculo cadastrado, para gerar mais segurança é implementado um método que que é responsável a efetuar o refresh token , a cada determinado periodo será gerado um novo token para o usuário continuar navegando com segurança em sua conta .
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Essa é a parte de frontend do projeto
 
-## Code scaffolding
+## como testar de forma local:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**requisitos:**
 
-## Build
+- Angular 16.2.0
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- clone o repositorio:
+  `git clone https://github.com/marcoDmc/parking.git`
 
-## Running unit tests
+## acessando a pasta e instalando as depêndencias:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- acesse a pasta do projeto:
+  `cd pasta_do_projeto`
+- instale as dependências:
+  ` npm i ou npm install`
+- inicie o servidor:
+  `ng serve`
 
-## Running end-to-end tests
+### Contribuições:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Estas são as instruções sobre como contribuir para o projeto:
 
-## Further help
+1. faça um fork do projeto.
+2. Crie um branch para suas alterações.
+3. Faça suas alterações.
+4. Confirme suas alterações.
+5. Envie suas alterações para seu branch.
+6. Abra uma solicitação pull.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Licença
+
+Este projeto está licenciado sob a licença MIT.
+
+## Contato
+
+Se você tiver alguma dúvida, entre em contato comigo em [marco damaceno](mailto:marcodmc0101@gmail.com?subject=[GitHub]%20Source%20Han%20Sans).
