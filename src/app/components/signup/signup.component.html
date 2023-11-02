@@ -1,1 +1,88 @@
-<p>signup works!</p>
+<section class="signup_section">
+  <form class="signup_form" [formGroup]="form">
+    <h1 class="signup_title">register</h1>
+    <p class="signup_pharse">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
+    </p>
+
+    <fieldset class="signup_fieldset">
+      <span>
+        <input
+          type="text"
+          class="signup_input"
+          placeholder="first name"
+          formControlName="firstName"
+        />
+        <input
+          type="text"
+          class="signup_input"
+          placeholder="last name"
+          formControlName="lastName"
+        />
+        <input
+          type="tel"
+          class="signup_input"
+          placeholder="phone number"
+          formControlName="phoneNumber"
+        /><input
+          type="email"
+          class="signup_input"
+          placeholder="email"
+          formControlName="email"
+        />
+
+        <span (click)="onShowHideLastPassword(eye, eyeSlash)" class="wrapper">
+          <input
+            type="password"
+            class="signup_input"
+            placeholder="password"
+            formControlName="password"
+          />
+          <ng-icon
+            name="heroEyeSolid"
+            class="eyeSlash"
+            size="20"
+            #eye
+          ></ng-icon>
+          <ng-icon
+            name="heroEyeSlashSolid"
+            size="20"
+            class="eye"
+            #eyeSlash
+          ></ng-icon>
+        </span>
+
+        <span (click)="onShowHideNewPassword(eyes, eyesSlash)" class="wrapper">
+          <input
+            type="password"
+            class="signup_input"
+            placeholder="confirm password"
+            formControlName="confirmPassword"
+          />
+          <ng-icon
+            name="heroEyeSolid"
+            class="eyeSlash"
+            size="20"
+            #eyes
+          ></ng-icon>
+          <ng-icon
+            name="heroEyeSlashSolid"
+            size="20"
+            class="eye"
+            #eyesSlash
+          ></ng-icon>
+        </span>
+      </span>
+
+      <span class="signup_wrapper_btn">
+        <button class="signup_create_account" (click)="onSignup()">
+          create account
+        </button>
+        <span class="signup_redirect_login">
+          already have an a account
+          <a href="signin" class="signup_redirect_login_link">log in</a></span
+        >
+      </span>
+    </fieldset>
+  </form>
+</section>
