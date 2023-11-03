@@ -20,6 +20,7 @@ import {
   heroBookmarkSolid,
   heroCog8ToothSolid,
   heroQuestionMarkCircleSolid,
+  heroCogSolid
 } from '@ng-icons/heroicons/solid';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -74,6 +75,7 @@ import { SharedModule } from './shared/shared.module';
       heroBookmarkSolid,
       heroCog8ToothSolid,
       heroQuestionMarkCircleSolid,
+      heroCogSolid
     }),
   ],
   providers: [],
