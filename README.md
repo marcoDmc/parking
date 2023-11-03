@@ -1,5 +1,8 @@
 # Parking
 
+
+status: Development
+
 `The WEX Bootcamp in the DIO.io platform proposes a project to build a system to monitor and manage a parking lot.`
 
 - O desafio requer que o desenvolvedor(a), desenvolva um gerenciador de estacionamento , com funcionalidades como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos e correlacionados
