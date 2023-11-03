@@ -63,7 +63,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
     padding: 2rem;
     gap: 1rem;
@@ -292,37 +292,25 @@
           border-radius: 50%;
           width: 100px;
           height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
         .box {
           border-radius: 50%;
           width: 100px;
           height: 100px;
           background-color: $cyan;
-          display: flex;
           padding: 10px;
-          align-items: center;
-          justify-content: center;
         }
         .strategic {
           background-color: $blue_light;
           border-radius: 50%;
           width: 100px;
           height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
         .tools {
           background-color: $blue_medium;
           border-radius: 50%;
           width: 100px;
           height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
         }
 
         .home_strong {
