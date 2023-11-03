@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
   constructor() {}
-  openAndClosed(popup: Element): void {
+  onOpenAndClosed(popup: Element): void {
     console.log(popup.className);
 
     if (popup.className == 'popup') {

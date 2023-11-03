@@ -1,42 +1,41 @@
 <div class="profile">
-    <img
-      src="https://i.redd.it/fhhhxz66rxl81.png"
-      alt="photo profile"
-      class="photo"
-      (click)="openAndClosed(popup)"
-    />
-  
-    <div class="popup_none" #popup>
-      <span class="wrapper">
-        <img
-          src="https://i.redd.it/fhhhxz66rxl81.png"
-          alt="photo profile"
-          class="photo"
-        />
-        <strong class="name">frankie sullivan</strong>
-        <p class="email">frankie@untitledui.com</p>
-      </span>
-  
-      <ul class="list">
-        <li class="opt">
-          <ng-icon name="heroUserSolid" size="25"></ng-icon>
-          view profile
-        </li>
-        <li class="opt">
-          <ng-icon name="heroCogSolid" size="25"></ng-icon>
-  
-          account settings
-        </li>
-        <li class="opt">
-          <ng-icon name="heroBoltSolid" size="25"></ng-icon>
-  
-          keyboard shortcuts
-        </li>
-        <li class="opt">
-          <ng-icon name="heroArrowRightOnRectangleSolid" size="25"></ng-icon>
-          log out
-        </li>
-      </ul>
-    </div>
+  <img
+    src="https://i.redd.it/fhhhxz66rxl81.png"
+    alt="photo profile"
+    class="photo"
+    (click)="onOpenAndClosed(popup)"
+  />
+
+  <div class="popup_none" #popup>
+    <span class="wrapper">
+      <img
+        src="https://i.redd.it/fhhhxz66rxl81.png"
+        alt="photo profile"
+        class="photo"
+      />
+      <strong class="name">frankie sullivan</strong>
+      <p class="email">frankie@untitledui.com</p>
+    </span>
+
+    <ul class="list">
+      <li class="opt">
+        <ng-icon name="heroUserSolid" size="25"></ng-icon>
+        view profile
+      </li>
+      <li class="opt">
+        <ng-icon name="heroCogSolid" size="25"></ng-icon>
+
+        account settings 
+      </li>
+      <li class="opt">
+        <ng-icon name="heroBoltSolid" size="25"></ng-icon>
+
+        keyboard shortcuts
+      </li>
+      <li class="opt">
+        <ng-icon name="heroArrowRightOnRectangleSolid" size="25"></ng-icon>
+        log out
+      </li>
+    </ul>
   </div>
-  
+</div>
