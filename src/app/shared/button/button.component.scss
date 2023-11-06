@@ -1,0 +1,103 @@
+@import "../../sass/variables.scss";
+
+.button1 {
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $white;
+  background-color: $blue;
+  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-wrap: nowrap;
+  overflow-wrap: break-word;
+  &:hover {
+    transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button2 {
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $white;
+  background-color: $red_light;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-wrap: nowrap;
+  overflow-wrap: break-word;
+  &:hover {
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button3 {
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $white;
+  background-color: $black;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-wrap: nowrap;
+  overflow-wrap: break-word;
+  &:hover {
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button4 {
+  width: 100%;
+  max-width: 150px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $white;
+  background-color: $blue_light;
+  transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+  text-wrap: nowrap;
+  overflow-wrap: break-word;
+  &:hover {
+    transition: 0.7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+
+
+.button5 {
+    width: 100%;
+    max-width: 150px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $white;
+    background-color: $gray;
+    transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-wrap: nowrap;
+    overflow-wrap: break-word;
+    &:hover {
+      transition: .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+      scale: 1.1;
+    }
+  }
