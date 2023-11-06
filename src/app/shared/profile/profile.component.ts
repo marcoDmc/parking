@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent {
-  constructor() {}
+  protected router = inject(Router);
+
   onOpenAndClosed(popup: Element): void {
     console.log(popup.className);
 
@@ -17,5 +19,9 @@ export class ProfileComponent {
       popup.removeAttribute('class');
       popup.setAttribute('class', 'popup');
     }
+  }
+
+  onRedirectProfileSettings(): void {
+    this.router.navigate(['settings/profile']);
   }
 }
