@@ -20,7 +20,7 @@ import {
   heroBookmarkSolid,
   heroCog8ToothSolid,
   heroQuestionMarkCircleSolid,
-  heroCogSolid
+  heroCogSolid,
 } from '@ng-icons/heroicons/solid';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +37,8 @@ import { ProfileComponent } from './shared/profile/profile.component';
 import { NotificationComponent } from './shared/notification/notification.component';
 import { HelpComponent } from './shared/help/help.component';
 import { SharedModule } from './shared/shared.module';
+import { SettingsProfileComponent } from './components/settings-profile/settings-profile.component';
+import { ButtonComponent } from './shared/button/button.component';
 
 @NgModule({
   declarations: [
@@ -50,8 +52,10 @@ import { SharedModule } from './shared/shared.module';
     SettingsComponent,
     SearchComponent,
     ProfileComponent,
+    ButtonComponent,
     NotificationComponent,
     HelpComponent,
+    SettingsProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +79,7 @@ import { SharedModule } from './shared/shared.module';
       heroBookmarkSolid,
       heroCog8ToothSolid,
       heroQuestionMarkCircleSolid,
-      heroCogSolid
+      heroCogSolid,
     }),
   ],
   providers: [],
