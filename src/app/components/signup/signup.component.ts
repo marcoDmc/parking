@@ -11,6 +11,9 @@ export class SignupComponent {
   constructor(private formServiveBuilder: FormBuilder) {}
   protected router = inject(Router);
 
+  name: string = 'create account';
+  className: string = 'button1';
+
   protected form = this.formServiveBuilder.group({
     firstName: [''],
     lastName: [''],

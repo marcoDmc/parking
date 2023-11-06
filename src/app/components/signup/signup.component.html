@@ -75,9 +75,8 @@
       </span>
 
       <span class="signup_wrapper_btn">
-        <button class="signup_create_account" (click)="onSignup()">
-          create account
-        </button>
+        <app-button [name]="name" [className]="className"></app-button>
+
         <span class="signup_redirect_login">
           already have an a account
           <a href="signin" class="signup_redirect_login_link">log in</a></span
