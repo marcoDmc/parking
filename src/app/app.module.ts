@@ -39,6 +39,7 @@ import { HelpComponent } from './shared/help/help.component';
 import { SharedModule } from './shared/shared.module';
 import { SettingsProfileComponent } from './components/settings-profile/settings-profile.component';
 import { ButtonComponent } from './shared/button/button.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ButtonComponent } from './shared/button/button.component';
     NotificationComponent,
     HelpComponent,
     SettingsProfileComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
