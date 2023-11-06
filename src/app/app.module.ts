@@ -40,6 +40,7 @@ import { SharedModule } from './shared/shared.module';
 import { SettingsProfileComponent } from './components/settings-profile/settings-profile.component';
 import { ButtonComponent } from './shared/button/button.component';
 import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { AboutComponent } from './components/about/about.component';
     HelpComponent,
     SettingsProfileComponent,
     AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
