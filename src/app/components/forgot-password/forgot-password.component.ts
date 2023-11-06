@@ -12,6 +12,9 @@ export class ForgotPasswordComponent {
 
   protected router = inject(Router);
 
+  name: string = 'update';
+  className: string = 'button4';
+
   protected form = this.formServiceBuilder.group({
     lastPassword: [''],
     newPassword: [''],
