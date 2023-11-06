@@ -1,0 +1,55 @@
+<section class="settings">
+  <header class="header">
+    <img
+      src="https://i.redd.it/fhhhxz66rxl81.png"
+      alt="profile user"
+      class="profile"
+    />
+    <div class="wrapper1">
+      <h1 class="name">frankie sullivan</h1>
+      <app-button [name]="name" [className]="viewBtn"></app-button>
+      <p class="email">rankie@untitledui.com</p>
+    </div>
+    <div class="wrapper2">
+      <app-button [name]="cancel" [className]="cancelBtn"></app-button>
+      <app-button [name]="save" [className]="saveBtn"></app-button>
+    </div>
+  </header>
+  <main class="main">
+    <div class="wrapper1">
+      <strong class="public">public profile</strong>
+      <p class="pharse">this will be displayed on your profile</p>
+      <span class="wrapper">
+        <input type="email" class="email" />
+
+        <span class="password_wrapper">
+          <input type="password" class="password" />
+          <span (click)="onShowHidePassword(eye, eyeSlash)">
+            <ng-icon
+              name="heroEyeSolid"
+              #eye
+              size="20"
+              class="eyeSlash"
+            ></ng-icon>
+            <ng-icon
+              name="heroEyeSlashSolid"
+              size="20"
+              #eyeSlash
+              class="eye"
+            ></ng-icon>
+          </span>
+        </span>
+      </span>
+    </div>
+    <div class="wrapper2">
+      <img
+        src="https://i.redd.it/fhhhxz66rxl81.png"
+        alt="profile user"
+        class="update_profile"
+      />
+      <span class="wrapper">
+        <input type="file" class="drop" />
+      </span>
+    </div>
+  </main>
+</section>
