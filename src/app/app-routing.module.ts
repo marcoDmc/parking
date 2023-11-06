@@ -5,6 +5,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { SignupComponent } from './components/signup/signup.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { SettingsProfileComponent } from './components/settings-profile/settings-profile.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'app',
     component: DashboardComponent,
+  },
+  {
+    path: 'settings/profile',
+    component: SettingsProfileComponent,
   },
 ];
 
