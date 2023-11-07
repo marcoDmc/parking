@@ -1,1 +1,19 @@
-<p>contact works!</p>
+<app-header></app-header>
+<section class="contact">
+  <h1>looking for suport, need to talk or just want to say hi</h1>
+  <form class="form" [formGroup]="form">
+    <fieldset>
+      <input type="text" placeholder="first name" formControlName="fisrtName"/>
+      <input type="text" placeholder="last name" formControlName="lastName"/>
+      <textarea
+      formControlName="message"
+        name="message"
+        cols="30"
+        rows="10"
+        placeholder="fell free to white us something"
+      ></textarea>
+      <input type="email" placeholder="your email" formControlName="email"/>
+      <app-button [className]="className" [name]="name"></app-button>
+    </fieldset>
+  </form>
+</section>
