@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,7 +8,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent {
-  constructor(private formServiceBuilder: FormBuilder) {}
+  @ViewChild('eye') show!: any;
+  @ViewChild('eyeSlash') hide!: any;
+
+  private formServiceBuilder = inject(FormBuilder);
 
   protected router = inject(Router);
 
@@ -22,17 +25,17 @@ export class LoginPageComponent {
 
   onRedirectSignup = () => this.router.navigate(['signup']);
 
-  onShowHidePassword(show: any, hide: any) {
-    if (show.changeDetector._lView[0].className == 'eye') {
-      show.changeDetector._lView[0].removeAttribute('class');
-      show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      hide.changeDetector._lView[0].removeAttribute('class');
-      hide.changeDetector._lView[0].setAttribute('class', 'eye');
+  onShowHidePassword() {
+    if (this.show.changeDetector._lView[0].className == 'eye') {
+      this.show.changeDetector._lView[0].removeAttribute('class');
+      this.show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
+      this.hide.changeDetector._lView[0].removeAttribute('class');
+      this.hide.changeDetector._lView[0].setAttribute('class', 'eye');
     } else {
-      hide.changeDetector._lView[0].removeAttribute('class');
-      hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      show.changeDetector._lView[0].removeAttribute('class');
-      show.changeDetector._lView[0].setAttribute('class', 'eye');
+      this.hide.changeDetector._lView[0].removeAttribute('class');
+      this.hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
+      this.show.changeDetector._lView[0].removeAttribute('class');
+      this.show.changeDetector._lView[0].setAttribute('class', 'eye');
     }
   }
 }
