@@ -41,6 +41,7 @@ import { SettingsProfileComponent } from './components/settings-profile/settings
 import { ButtonComponent } from './shared/button/button.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { HeaderComponent } from './shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +61,7 @@ import { ContactComponent } from './components/contact/contact.component';
     SettingsProfileComponent,
     AboutComponent,
     ContactComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
