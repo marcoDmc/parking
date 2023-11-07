@@ -18,13 +18,9 @@ export class LoginPageComponent {
     checkbox: [false],
   });
 
-  onLogin(): void {
-    console.log(this.form.value);
-  }
+  onLogin = () => {};
 
-  onRedirectSignup(): void {
-    this.router.navigate(['signup']);
-  }
+  onRedirectSignup = () => this.router.navigate(['signup']);
 
   onShowHidePassword(show: any, hide: any) {
     if (show.changeDetector._lView[0].className == 'eye') {

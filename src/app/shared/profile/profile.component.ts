@@ -21,7 +21,5 @@ export class ProfileComponent {
     }
   }
 
-  onRedirectProfileSettings(): void {
-    this.router.navigate(['settings/profile']);
-  }
+  onRedirectProfileSettings = () => this.router.navigate(['settings/profile']);
 }

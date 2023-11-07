@@ -23,13 +23,9 @@ export class SignupComponent {
     confirmPassword: [''],
   });
 
-  onSignup(): void {
-    console.log(this.form.value);
-  }
+  onSignup = () => console.log(this.form.value);
 
-  onlogin(): void {
-    this.router.navigate(['signin']);
-  }
+  onlogin = () => this.router.navigate(['signin']);
 
   onShowHideLastPassword(show: any, hide: any) {
     if (show.changeDetector._lView[0].className == 'eye') {

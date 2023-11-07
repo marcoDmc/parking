@@ -20,13 +20,11 @@ export class ForgotPasswordComponent {
     newPassword: [''],
   });
 
-  onUpdatePassword(): void {
-    console.log(this.form.value);
-  }
+  onUpdatePassword = () => console.log(this.form.value);
 
-  onRedirectLogin(): void {
-    this.router.navigate(['signin']);
-  }
+  onRedirectLogin = () => this.router.navigate(['signin']);
+
+  
   onShowHideLastPassword(show: any, hide: any) {
     if (show.changeDetector._lView[0].className == 'eye') {
       show.changeDetector._lView[0].removeAttribute('class');

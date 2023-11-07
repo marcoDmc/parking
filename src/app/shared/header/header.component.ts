@@ -11,21 +11,13 @@ export class HeaderComponent implements OnInit {
 
   @Output() Login: EventEmitter<any> = new EventEmitter();
 
-  onRedirectLoginPage(): void {
-    this.router.navigate(['signin']);
-  }
+  onRedirectLoginPage = () => this.router.navigate(['signin']);
 
-  onRedirectDashboard(): void {
-    this.router.navigate(['app']);
-  }
-  onRedirectAbout(): void {
-    this.router.navigate(['about']);
-  }
+  onRedirectDashboard = () => this.router.navigate(['app']);
+
+  onRedirectAbout = () => this.router.navigate(['about']);
 
   onRedirectHome = () => this.router.navigate(['home']);
 
-  
-  ngOnInit(): void {
-    this.Login.emit(this.onRedirectLoginPage);
-  }
+  ngOnInit = () => this.Login.emit(this.onRedirectLoginPage);
 }
