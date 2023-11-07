@@ -19,5 +19,9 @@ export class HeaderComponent implements OnInit {
 
   onRedirectHome = () => this.router.navigate(['home']);
 
+  onRedirectHelp = () => this.router.navigate(['help']);
+
+  onRedirectContact = () => this.router.navigate(['contact']);
+
   ngOnInit = () => this.Login.emit(this.onRedirectLoginPage);
 }
