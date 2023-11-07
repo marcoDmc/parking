@@ -7,6 +7,8 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SettingsProfileComponent } from './components/settings-profile/settings-profile.component';
 import { AboutComponent } from './components/about/about.component';
+import { HelpHomePageComponent } from './components/help-home-page/help-home-page.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+  },
+  {
+    path: 'help',
+    component: HelpHomePageComponent,
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
   },
 ];
 

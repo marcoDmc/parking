@@ -21,6 +21,8 @@ import {
   heroCog8ToothSolid,
   heroQuestionMarkCircleSolid,
   heroCogSolid,
+  heroPlusSmallSolid,
+  heroMinusSmallSolid,
 } from '@ng-icons/heroicons/solid';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -42,6 +44,8 @@ import { ButtonComponent } from './shared/button/button.component';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './shared/header/header.component';
+import { HelpHomePageComponent } from './components/help-home-page/help-home-page.component';
+import { AccordionComponent } from './shared/accordion/accordion.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +65,10 @@ import { HeaderComponent } from './shared/header/header.component';
     SettingsProfileComponent,
     AboutComponent,
     ContactComponent,
-    HeaderComponent
+    HeaderComponent,
+    HelpComponent,
+    HelpHomePageComponent,
+    AccordionComponent,
   ],
   imports: [
     BrowserModule,
@@ -86,6 +93,8 @@ import { HeaderComponent } from './shared/header/header.component';
       heroCog8ToothSolid,
       heroQuestionMarkCircleSolid,
       heroCogSolid,
+      heroPlusSmallSolid,
+      heroMinusSmallSolid,
     }),
   ],
   providers: [],
