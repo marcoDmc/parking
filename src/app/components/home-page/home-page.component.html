@@ -1,13 +1,5 @@
 <section class="home_container">
-  <header class="home_header">
-    <h1 class="home_header_title">parking</h1>
-    <ul class="home_header_list">
-      <li class="home_list" (click)="onRedirectAbout()">about</li>
-      <li class="home_list">help</li>
-      <li class="home_list">contact</li>
-      <li class="home_list" (click)="onRedirectLoginPage()">sign in</li>
-    </ul>
-  </header>
+  <app-header (Login)="(onRedirectLoginPage)"></app-header>
 
   <section class="home_section_1">
     <h2 class="home_title">search and compare</h2>

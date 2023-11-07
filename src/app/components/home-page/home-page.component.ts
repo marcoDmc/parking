@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,16 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent {
-  constructor(private router: Router) {}
+  constructor() {}
 
-  onRedirectLoginPage(): void {
-    this.router.navigate(['signin']);
-  }
+  private router = inject(Router);
 
-  onRedirectDashboard(): void {
-    this.router.navigate(['app']);
-  }
-  onRedirectAbout(): void {
-    this.router.navigate(['about']);
-  }
+  @Input() onRedirectLoginPage = () => this.router.navigate(['signin']);
+
+  onRedirectDashboard = () => this.router.navigate(['app']);
 }
