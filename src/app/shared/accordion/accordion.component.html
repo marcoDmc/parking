@@ -1,0 +1,21 @@
+<div class="accordion" #acc>
+  <div class="wrapper">
+    <p class="title">{{ pharse }}</p>
+    <span (click)="onViewHide()">
+      <ng-icon name="heroPlusSmallSolid" size="20" #view class="view"></ng-icon>
+      <ng-icon
+        name="heroMinusSmallSolid"
+        size="20"
+        #hide
+        class="hide"
+      ></ng-icon>
+    </span>
+  </div>
+
+  <span class="text" #text
+    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+    minima, pariatur perferendis cum dolorum distinctio enim, quas, officiis
+    amet excepturi omnis tempora recusandae voluptatum odit totam dolore
+    aspernatur nobis. Neque?</span
+  >
+</div>
