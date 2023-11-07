@@ -1,0 +1,139 @@
+@import "../../sass/variables.scss";
+
+.about {
+  height: 100vh;
+  width: 100vw;
+  background-color: $white;
+  .header {
+    width: 100vw;
+    height: 100vh;
+    background-color: $blue_medium2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    background-attachment: fixed;
+    .title {
+      width: 100%;
+      text-align: left;
+      font-size: 2.2rem;
+      color: $white;
+      max-width: 500px;
+      overflow-wrap: break-word;
+      text-wrap: wrap;
+      line-height: auto;
+      &::first-letter {
+        text-transform: capitalize;
+      }
+    }
+    .pharse {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      max-width: 400px;
+      color: $black;
+      overflow-wrap: break-word;
+      text-wrap: wrap;
+      line-height: auto;
+    }
+  }
+
+  .section:nth-child(2) {
+    height: 100vh;
+    width: 100vw;
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: column;
+    .pharse {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      max-width: 1250px;
+      color: $black;
+      overflow-wrap: break-word;
+      text-wrap: wrap;
+      line-height: auto;
+    }
+  }
+
+  .section:nth-child(3) {
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    .pharse {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      max-width: 1250px;
+      color: $black;
+      overflow-wrap: break-word;
+      text-wrap: wrap;
+      line-height: auto;
+    }
+  }
+
+  .section:nth-child(4) {
+    height: 100vh;
+    width: 100vw;
+    background-color: floralwhite;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    .pharse {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      max-width: 1250px;
+      color: $black;
+      overflow-wrap: break-word;
+      text-wrap: wrap;
+      line-height: auto;
+    }
+  }
+  .section:nth-child(5) {
+    height: 100vh;
+    background-color: ghostwhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    gap: 2rem;
+
+    .pharse {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-align: left;
+      width: 100%;
+      max-width: 1250px;
+      color: $black;
+      overflow-wrap: break-word;
+      text-wrap: wrap;
+      line-height: auto;
+    }
+  }
+  .footer {
+    background-color: $black;
+    color: $white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
