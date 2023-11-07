@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot-password.component.scss'],
 })
 export class ForgotPasswordComponent {
+  @ViewChild('eye') show!: any;
+  @ViewChild('eyeSlash') hide!: any;
+
+  @ViewChild('eyes') shows!: any;
+  @ViewChild('eyesSlash') hides!: any;
+
   constructor(private formServiceBuilder: FormBuilder) {}
 
   protected router = inject(Router);
@@ -24,32 +30,31 @@ export class ForgotPasswordComponent {
 
   onRedirectLogin = () => this.router.navigate(['signin']);
 
-  
-  onShowHideLastPassword(show: any, hide: any) {
-    if (show.changeDetector._lView[0].className == 'eye') {
-      show.changeDetector._lView[0].removeAttribute('class');
-      show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      hide.changeDetector._lView[0].removeAttribute('class');
-      hide.changeDetector._lView[0].setAttribute('class', 'eye');
+  onShowHideLastPassword() {
+    if (this.shows.changeDetector._lView[0].className == 'eye') {
+      this.shows.changeDetector._lView[0].removeAttribute('class');
+      this.shows.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
+      this.hides.changeDetector._lView[0].removeAttribute('class');
+      this.hides.changeDetector._lView[0].setAttribute('class', 'eye');
     } else {
-      hide.changeDetector._lView[0].removeAttribute('class');
-      hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      show.changeDetector._lView[0].removeAttribute('class');
-      show.changeDetector._lView[0].setAttribute('class', 'eye');
+      this.hides.changeDetector._lView[0].removeAttribute('class');
+      this.hides.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
+      this.shows.changeDetector._lView[0].removeAttribute('class');
+      this.shows.changeDetector._lView[0].setAttribute('class', 'eye');
     }
   }
 
-  onShowHideNewPassword(show: any, hide: any) {
-    if (show.changeDetector._lView[0].className == 'eye') {
-      show.changeDetector._lView[0].removeAttribute('class');
-      show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      hide.changeDetector._lView[0].removeAttribute('class');
-      hide.changeDetector._lView[0].setAttribute('class', 'eye');
+  onShowHideNewPassword() {
+    if (this.show.changeDetector._lView[0].className == 'eye') {
+      this.show.changeDetector._lView[0].removeAttribute('class');
+      this.show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
+      this.hide.changeDetector._lView[0].removeAttribute('class');
+      this.hide.changeDetector._lView[0].setAttribute('class', 'eye');
     } else {
-      hide.changeDetector._lView[0].removeAttribute('class');
-      hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      show.changeDetector._lView[0].removeAttribute('class');
-      show.changeDetector._lView[0].setAttribute('class', 'eye');
+      this.hide.changeDetector._lView[0].removeAttribute('class');
+      this.hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
+      this.show.changeDetector._lView[0].removeAttribute('class');
+      this.show.changeDetector._lView[0].setAttribute('class', 'eye');
     }
   }
 }
