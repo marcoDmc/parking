@@ -9,12 +9,14 @@ import { Router } from '@angular/router';
 export class HomePageComponent {
   constructor(private router: Router) {}
 
-
   onRedirectLoginPage(): void {
     this.router.navigate(['signin']);
   }
 
   onRedirectDashboard(): void {
     this.router.navigate(['app']);
+  }
+  onRedirectAbout(): void {
+    this.router.navigate(['about']);
   }
 }
