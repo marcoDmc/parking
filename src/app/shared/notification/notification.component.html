@@ -1,3 +1,18 @@
 <span>
   <ng-icon name="heroBellSolid" size="25"></ng-icon>
 </span>
+
+<div class="notifications" style="position: fixed">
+  <span class="header">
+    <strong class="title">notification</strong>
+    <ng-icon name="heroXMarkSolid" size="25"></ng-icon>
+  </span>
+  <div class="tab">
+    <span class="tabs">
+      <span>view all</span>
+      <span>mentions</span>
+    </span>
+    <div class="content"></div>
+  </div>
+  <app-button [name]="name" [className]="className"></app-button>
+</div>

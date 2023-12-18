@@ -1,6 +1,7 @@
 <header class="home_header">
   <h1 class="home_header_title" (click)="onRedirectHome()">parking</h1>
-  <ul class="home_header_list">
+  <span class="hamburguer" #menu (click)="onSetActiveMenu()"></span>
+  <ul class="home_header_list" (click)="onSetActiveMenu()">
     <li class="home_list" (click)="onRedirectAbout()">about</li>
     <li class="home_list" (click)="onRedirectHelp()">help</li>
     <li class="home_list" (click)="onRedirectContact()">contact</li>

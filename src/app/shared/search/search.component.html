@@ -4,10 +4,22 @@
     class="search_input"
     placeholder="Registration number or booking name"
   />
-  <div class="wrapper" >
-    <app-notification></app-notification>
-    <app-settings ></app-settings>
-    <app-help></app-help>
-    <app-profile></app-profile>
+  <div class="wrapper">
+    <span (click)="redirectNotifications()">
+      <app-notification style="cursor: pointer"></app-notification>
+    </span>
+    <span (click)="redirectSettings()">
+      <app-settings style="cursor: pointer"></app-settings>
+    </span>
+    <span (click)="redirectHelp()">
+      <app-help style="cursor: pointer"></app-help>
+    </span>
+    <app-profile
+      [image]="imageSource"
+      [Profile]="redirectProfile"
+      [Notifications]="redirectNotifications"
+      [Help]="redirectHelp"
+      [Settings]="redirectSettings"
+    ></app-profile>
   </div>
 </div>

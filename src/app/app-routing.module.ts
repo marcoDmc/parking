@@ -9,48 +9,82 @@ import { SettingsProfileComponent } from './components/settings-profile/settings
 import { AboutComponent } from './components/about/about.component';
 import { HelpHomePageComponent } from './components/help-home-page/help-home-page.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { guardGuard } from './Guard/guard.guard';
+import { InitialPageComponent } from './components/initial-page/initial-page.component';
+import { SettingsPageComponent } from './components/settings-page/settings-page.component';
+import { NotificationPageComponent } from './components/notification-page/notification-page.component';
 
 const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: HomePageComponent,
+    component: InitialPageComponent,
+  },
+
+  {
+    path: 'parking',
+    component: InitialPageComponent,
+    children: [
+      {
+        path: 'home',
+        component: HomePageComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'help',
+        component: HelpHomePageComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'signin',
+        component: LoginPageComponent,
+      },
+      {
+        path: 'signup',
+        component: SignupComponent,
+      },
+      {
+        path: 'forgot',
+        component: ForgotPasswordComponent,
+      },
+    ],
   },
   {
-    path: 'home',
-    component: HomePageComponent,
-  },
-  {
-    path: 'signin',
-    component: LoginPageComponent,
-  },
-  {
-    path: 'signup',
-    component: SignupComponent,
-  },
-  {
-    path: 'forgot',
-    component: ForgotPasswordComponent,
-  },
-  {
-    path: 'app',
+    path: 'dashboard',
+    canActivate: [guardGuard],
     component: DashboardComponent,
-  },
-  {
-    path: 'settings/profile',
-    component: SettingsProfileComponent,
-  },
-  {
-    path: 'about',
-    component: AboutComponent,
-  },
-  {
-    path: 'help',
-    component: HelpHomePageComponent,
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
+    children: [
+      {
+        path: 'profile',
+        component: SettingsProfileComponent,
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'help',
+        component: HelpHomePageComponent,
+      },
+      {
+        path: 'contact',
+        component: ContactComponent,
+      },
+      {
+        path: 'notification',
+        component: NotificationPageComponent,
+      },
+      {
+        path: 'settings',
+        component: SettingsPageComponent,
+      },
+    ],
   },
 ];
 

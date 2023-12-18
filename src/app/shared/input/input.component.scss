@@ -1,0 +1,53 @@
+@import "../../sass/variables.scss";
+
+label {
+  padding: 5px 5px;
+  width: 100%;
+  min-width: 400px;
+  display: grid;
+  height: auto;
+  gap: 10px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: $color_1;
+
+  .wrapper {
+    background: linear-gradient(100deg, $color_2, $color_3, $color_4);
+    padding: 3px;
+    width: 100%;
+    border-radius: 5px;
+    .text_1 {
+      background-color: $white;
+      outline: none;
+      border: none;
+      letter-spacing: 2px;
+      padding: 10px;
+      height: 100%;
+      font-weight: normal;
+      color: $black;
+      width: 100%;
+    }
+    .password_1 {
+      background-color: $white;
+      outline: none;
+      letter-spacing: 2px;
+      padding: 10px;
+      height: 100%;
+      font-weight: normal;
+      color: $black;
+      width: 100%;
+      border: none;
+    }
+    .email_1 {
+      background-color: $white;
+      outline: none;
+      border: none;
+      letter-spacing: 2px;
+      padding: 10px;
+      height: 100%;
+      font-weight: normal;
+      color: $black;
+      width: 100%;
+    }
+  }
+}

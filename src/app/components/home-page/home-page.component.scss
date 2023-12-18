@@ -41,7 +41,6 @@
         &:hover {
           width: 100%;
           max-width: 100px;
-          background-color: $blue_medium;
           transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
           color: $white;
           animation: 0.4s linear 1s alternate infinite animaList;
@@ -60,6 +59,7 @@
   }
   .home_section_1 {
     height: 100vh;
+    max-height: 800px;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -67,13 +67,13 @@
     justify-content: center;
     padding: 2rem;
     gap: 1rem;
-    background-image: url("../../../assets/parking.png");
-    background-position: right;
+    background-image: url("../../../assets/parking-3.jpg");
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 60% 100%;
+    background-size: cover;
     object-fit: cover;
     background-attachment: fixed;
-    background-color: $gray;
+    background-color: $color_1;
 
     .home_title {
       font-size: 2rem;
@@ -85,31 +85,29 @@
       margin-bottom: 1rem;
       &::first-letter {
         font-size: 2rem;
-        color: $blue_light;
+        color: $color_4;
       }
-
-      &::after {
-        content: "all available parking";
-        width: 300px;
-        height: auto;
-        position: absolute;
-        bottom: -20px;
-        left: 0;
-        font-size: 1.2rem;
-        font-weight: 400;
-        color: $blue_light;
+    }
+    .home_label {
+      color: $white;
+      width: 100%;
+      font-size: 1.5rem;
+      text-align: left;
+      &::first-letter {
+        text-transform: uppercase;
       }
     }
     .home_pharse {
-      color: $white;
+      color: $color_17;
       font-weight: 600;
       overflow-wrap: break-word;
-      width: 500px;
+      text-wrap: wrap;
+      width: 400px;
     }
     .home_wrapper {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
       width: 100%;
       max-width: 400px;
       gap: 1rem;
@@ -157,14 +155,51 @@
         }
       }
     }
+
+    @media (max-width: 810px) {
+      background-image: none;
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      .home_title {
+        text-align: center;
+      }
+      .home_label {
+        text-align: center;
+        width: 100%;
+      }
+      .home_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .home_pharse {
+        text-align: center;
+      }
+    }
+    @media (max-width: 398px) {
+      .home_wrapper {
+        display: grid;
+        place-items: center;
+        gap: 1rem;
+      }
+      .home_pharse {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
   }
   .home_section_2 {
-    height: 100vh;
+    height: auto;
     width: 100vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: $white;
+    padding: 1rem 0;
     .home_wrapper_pharses {
       height: auto;
       gap: 1rem;
@@ -217,123 +252,76 @@
         }
       }
     }
+    @media (max-width: 810px) {
+      display: grid;
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+      place-items: center;
+      gap: 0;
+
+      .home_wrapper_pharses {
+        place-items: center;
+
+        .home_title,
+        .home_pharse {
+          text-align: center;
+        }
+
+        .home_pharse {
+          width: 100%;
+          max-width: 450px;
+        }
+      }
+    }
   }
   .home_section_3 {
-    height: 100vh;
-    width: 100vw;
-    background-color: $blue_dark;
     display: flex;
-    flex-direction: column;
+    height: auto;
+    width: 100vw;
+    background-color: $color_17;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    padding: 0 1rem;
 
-    .home_perfil_user {
-      object-fit: cover;
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 3px solid $white;
-    }
-    .home_pharse {
-      overflow-wrap: break-word;
-      width: 600px;
-      text-align: center;
-      color: $white;
-      font-weight: 600;
-    }
-    .home_strong {
-      text-transform: capitalize;
-      color: $red_light;
-    }
-    .home_title {
-      font-size: 2rem;
-      color: $blue;
-    }
-    .home_name_user {
-      color: $red_light;
-      text-transform: capitalize;
-      font-size: 1.2rem;
+    .testimonial {
+      width: 100%;
+      max-width: 800px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      @media (max-width: 731px) {
+        width: 100%;
+        max-width: 500px;
+      }
+      @media (max-width: 502px) {
+        width: 100%;
+        max-width: 350px;
+      }
     }
   }
   .home_section_4 {
     width: 100vw;
-    height: 1000px;
+    height: 100vh;
+    min-height: 1200px;
     padding: 1rem;
+    background-image: url("../../../assets/parking-2.jpg");
     background-color: $white;
-    background-image: url("../../../assets/background.png");
     background-repeat: no-repeat;
-    background-size: 100vh;
+    background-size: 50% 100vh;
     background-position: right;
-    background-attachment: fixed;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    overflow: hidden;
+    display: grid;
+    gap: 1rem;
 
-    .home_wrapper {
-      height: auto;
-      gap: 1rem;
-
-      .home_cards {
-        width: 100%;
-        max-width: 600px;
-        padding: 10px;
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 2;
-        place-items: start;
-        gap: 1rem;
-
-        .home_icon {
-          object-fit: cover;
-          border: 1px solid $blue_dark;
-          padding: 10px;
-          grid-column: 1/1;
-          grid-row: 1/2;
-        }
-        .marketing {
-          background-color: $red_light;
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
-        }
-        .box {
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
-          background-color: $cyan;
-          padding: 10px;
-        }
-        .strategic {
-          background-color: $blue_light;
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
-        }
-        .tools {
-          background-color: $blue_medium;
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
-        }
-
-        .home_strong {
-          grid-column: 2/2;
-          grid-row: 1/2;
-          display: flex;
-          align-items: center;
-          justify-content: start;
-          height: 100%;
-          width: 100%;
-          gap: 10px;
-          text-transform: capitalize;
-        }
-        .home_span {
-          color: $blue;
-        }
-
-        .home_pharse {
-          grid-column: 2/2;
-          grid-row: 2/2;
-        }
-      }
+    @media (max-width: 1240px) {
+      background-image: none;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
   }
   .home_footer {

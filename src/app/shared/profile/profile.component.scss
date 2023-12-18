@@ -91,7 +91,7 @@
         cursor: pointer;
         &:hover {
           transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-          background-color: $blue;
+          background: linear-gradient(100deg, $color_2, $color_3, $color_4);
           border-radius: 8px;
           color: $white;
         }

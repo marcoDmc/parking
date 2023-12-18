@@ -1,3 +1,13 @@
+<div
+  class="card"
+  style="
+    padding: 1rem;
+    width: 100%;
+    height: 60px;
+    background-color: #f9fcfe;
+    position: fixed;
+  "
+></div>
 <section class="signup_section">
   <form class="signup_form" [formGroup]="form">
     <h1 class="signup_title">register</h1>
@@ -10,76 +20,106 @@
         <input
           type="text"
           class="signup_input"
-          placeholder="first name"
-          formControlName="firstName"
+          placeholder="nickname"
+          formControlName="nickname"
+          #nickname
         />
         <input
           type="text"
           class="signup_input"
-          placeholder="last name"
-          formControlName="lastName"
+          placeholder="fullname"
+          formControlName="fullname"
+          #fullname
         />
         <input
           type="tel"
           class="signup_input"
-          placeholder="phone number"
-          formControlName="phoneNumber"
+          placeholder="phone"
+          formControlName="phone"
+          #phone
         /><input
           type="email"
           class="signup_input"
           placeholder="email"
           formControlName="email"
+          #email
+        />
+        <input
+          type="text"
+          class="signup_input"
+          placeholder="cpf"
+          formControlName="cpf"
+          #cpf
+        />
+        <input
+          type="text"
+          placeholder="address"
+          formControlName="address"
+          class="signup_input"
+          #address
         />
 
-        <span (click)="onShowHideLastPassword()" class="wrapper">
+        <span class="wrapper">
           <input
             type="password"
             class="signup_input"
             placeholder="password"
             formControlName="password"
+            #password
           />
-          <ng-icon
-            name="heroEyeSolid"
-            class="eyeSlash"
-            size="20"
-            #eye
-          ></ng-icon>
-          <ng-icon
-            name="heroEyeSlashSolid"
-            size="20"
-            class="eye"
-            #eyeSlash
-          ></ng-icon>
+          <span (click)="onShowHideLastPassword()">
+            <ng-icon
+              name="heroEyeSolid"
+              class="eyeSlash"
+              size="20"
+              #eye
+            ></ng-icon>
+            <ng-icon
+              name="heroEyeSlashSolid"
+              size="20"
+              class="eye"
+              #eyeSlash
+            ></ng-icon>
+          </span>
         </span>
 
-        <span (click)="onShowHideNewPassword()" class="wrapper">
+        <span class="wrapper">
           <input
             type="password"
-            class="signup_input"
+            class="signup_input_confirm"
             placeholder="confirm password"
             formControlName="confirmPassword"
+            #passwordConfirm
           />
-          <ng-icon
-            name="heroEyeSolid"
-            class="eyeSlash"
-            size="20"
-            #eyes
-          ></ng-icon>
-          <ng-icon
-            name="heroEyeSlashSolid"
-            size="20"
-            class="eye"
-            #eyesSlash
-          ></ng-icon>
+          <span (click)="onShowHideNewPassword()">
+            <ng-icon
+              name="heroEyeSolid"
+              class="eyeSlash"
+              size="20"
+              #eyes
+            ></ng-icon>
+            <ng-icon
+              name="heroEyeSlashSolid"
+              size="20"
+              class="eye"
+              #eyesSlash
+            ></ng-icon>
+          </span>
         </span>
       </span>
 
       <span class="signup_wrapper_btn">
-        <app-button [name]="name" [className]="className"></app-button>
+        <app-button
+          [name]="name"
+          [className]="className"
+          [Func]="onSignup"
+        ></app-button>
 
         <span class="signup_redirect_login">
           already have an a account
-          <a href="signin" class="signup_redirect_login_link">log in</a></span
+          <a href="parking/signin" class="signup_redirect_login_link"
+            >log in</a
+          ></span
         >
       </span>
     </fieldset>

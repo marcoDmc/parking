@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output, inject } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+  inject,
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,18 +17,35 @@ export class HeaderComponent implements OnInit {
   protected router = inject(Router);
 
   @Output() Login: EventEmitter<any> = new EventEmitter();
+  @ViewChild('menu') menu!: any;
+  menuToggle: boolean = false;
 
-  onRedirectLoginPage = () => this.router.navigate(['signin']);
+  onRedirectLoginPage = () => this.router.navigate(['parking/signin']);
 
-  onRedirectDashboard = () => this.router.navigate(['app']);
+  onRedirectDashboard = () => this.router.navigate(['dashboard']);
 
-  onRedirectAbout = () => this.router.navigate(['about']);
+  onRedirectAbout = () => this.router.navigate(['parking/about']);
 
-  onRedirectHome = () => this.router.navigate(['home']);
+  onRedirectHome = () => this.router.navigate(['parking/home']);
 
-  onRedirectHelp = () => this.router.navigate(['help']);
+  onRedirectHelp = () => this.router.navigate(['parking/help']);
 
-  onRedirectContact = () => this.router.navigate(['contact']);
+  onRedirectContact = () => this.router.navigate(['parking/contact']);
 
-  ngOnInit = () => this.Login.emit(this.onRedirectLoginPage);
+  ngOnInit = () => {
+    this.Login.emit(this.onRedirectLoginPage);
+  };
+
+  onSetActiveMenu = () => {
+    this.menuToggle = !this.menuToggle;
+    console.log(this.menuToggle);
+
+    if (this.menuToggle) {
+      this.menu.nativeElement.removeAttribute('class');
+      this.menu.nativeElement.setAttribute('class', 'hamburguer_open');
+    } else {
+      this.menu.nativeElement.removeAttribute('class');
+      this.menu.nativeElement.setAttribute('class', 'hamburguer');
+    }
+  };
 }

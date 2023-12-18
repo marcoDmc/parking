@@ -1,0 +1,194 @@
+@import "../../sass/variables.scss";
+
+.button1 {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background-color: $blue;
+  color: $white;
+  font-weight: 400;
+  text-transform: capitalize;
+  border: 2px solid $blue;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button2 {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background-color: $red_light;
+  color: $white;
+  font-weight: 400;
+  text-transform: capitalize;
+  border: 2px solid $red_light;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button3 {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background-color: $gray;
+  color: $white;
+  font-weight: 400;
+  text-transform: capitalize;
+  border: 2px solid $gray;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button4 {
+  width: 100%;
+  min-width: 410px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background-color: $blue;
+  color: $white;
+  font-weight: 400;
+  text-transform: capitalize;
+  border: 2px solid $blue;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button5 {
+  width: 100%;
+  min-width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background: linear-gradient(100deg, $color_2, $color_3, $color_4);
+  color: $white;
+  font-weight: 400;
+  text-transform: capitalize;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
+  input {
+    background-image: linear-gradient(
+      to right,
+      #ff7a18,
+      #af002d,
+      #319197 100%,
+      #319197 200%
+    );
+    background-position-x: 0%;
+    background-size: 200%;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    padding: 1rem 1.25rem;
+    text-shadow: 0 1px 1px #333;
+    transition: all 0.25s;
+  }
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.button6 {
+  width: 100%;
+  min-width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background: $color_16;
+  display: none;
+  font-weight: 400;
+  text-transform: capitalize;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}
+
+.label {
+  width: 100%;
+  min-width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s ease;
+  cursor: pointer;
+  background: $color_16;
+  color: $white;
+  font-weight: 400;
+  text-transform: capitalize;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.1;
+  }
+}

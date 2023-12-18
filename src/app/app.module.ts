@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgIconsModule } from '@ng-icons/core';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import {
   heroEyeSlashSolid,
@@ -23,8 +26,8 @@ import {
   heroCogSolid,
   heroPlusSmallSolid,
   heroMinusSmallSolid,
+  heroXMarkSolid,
 } from '@ng-icons/heroicons/solid';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -46,6 +49,13 @@ import { ContactComponent } from './components/contact/contact.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HelpHomePageComponent } from './components/help-home-page/help-home-page.component';
 import { AccordionComponent } from './shared/accordion/accordion.component';
+import { InitialPageComponent } from './components/initial-page/initial-page.component';
+import { InputComponent } from './shared/input/input.component';
+import { ButtonUpdatePhotoComponent } from './shared/button-update-photo/button-update-photo.component';
+import { SettingsPageComponent } from './components/settings-page/settings-page.component';
+import { NotificationPageComponent } from './components/notification-page/notification-page.component';
+import { CardComponent } from './shared/card/card.component';
+import { TestimonialCardComponent } from './shared/testimonial-card/testimonial-card.component';
 
 @NgModule({
   declarations: [
@@ -69,12 +79,21 @@ import { AccordionComponent } from './shared/accordion/accordion.component';
     HelpComponent,
     HelpHomePageComponent,
     AccordionComponent,
+    InitialPageComponent,
+    InputComponent,
+    ButtonUpdatePhotoComponent,
+    SettingsPageComponent,
+    NotificationPageComponent,
+    CardComponent,
+    TestimonialCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     SharedModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
     NgIconsModule.withIcons({
       heroEyeSlashSolid,
       heroEyeSolid,
@@ -95,6 +114,7 @@ import { AccordionComponent } from './shared/accordion/accordion.component';
       heroCogSolid,
       heroPlusSmallSolid,
       heroMinusSmallSolid,
+      heroXMarkSolid,
     }),
   ],
   providers: [],

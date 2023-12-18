@@ -1,0 +1,84 @@
+@import "../../sass/variables.scss";
+
+.card1 {
+  width: 100%;
+  max-width: 2000px;
+  height: 100%;
+  min-height: 150px;
+  padding: 10px;
+  border: 2px dashed $color_1;
+  background-color: $color_5;
+  display: grid;
+  border-radius: 5px;
+  gap: 1rem;
+  place-items: left;
+  justify-content: space-around;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+
+  &:hover {
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.025;
+  }
+  .name {
+    color: $color_1;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+  }
+  .pharse {
+    color: $color_1;
+  }
+
+  @media (max-width: 810px) {
+    max-width: 400px;
+  }
+}
+.card2 {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  max-height: 250px;
+  padding: 10px;
+  border: 2px dashed $color_1;
+  background-color: transparent;
+  display: grid;
+  border-radius: 5px;
+  gap: 1rem;
+  place-items: left;
+  justify-content: space-around;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+  overflow: hidden;
+
+
+  &:hover {
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    scale: 1.025;
+  }
+  .name {
+    color: $color_1;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+
+
+    &::first-letter{
+      color:$color_19;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+  }
+  .pharse {
+    color: $color_1;
+    font-style: italic;
+  }
+
+  @media (max-width: 810px) {
+    max-width: 400px;
+  }
+}
+.card3 {
+  .name {
+  }
+  .pharse {
+  }
+}

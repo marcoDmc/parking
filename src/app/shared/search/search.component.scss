@@ -8,11 +8,13 @@
 
   .search_input {
     width: 100%;
-    max-width: 400px;
+    max-width: 600px;
     padding: 10px;
     background: transparent;
     outline: none;
-    border: none;
+    border: 1px solid $color_1;
+    border-radius: 5px;
+    font-size: 1rem;
     &::placeholder {
       font-weight: 600;
       color: $gray;
@@ -25,7 +27,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 1.5rem;
     width: 100%;
     max-width: 400px;

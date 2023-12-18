@@ -1,18 +1,42 @@
 <section class="form_section">
-    <form class="login_form" [formGroup]="form">
-      <h1 class="login_title">welcome</h1>
-      <p class="login_pharse">let's start</p>
-  
-      <fieldset class="login_fieldset">
-        <input type="email" class="login_input_email" formControlName="email" />
-  
-        <span (click)="onShowHidePassword()" class="wrapper_password">
-          <input
+  <div
+    class="card"
+    style="
+      padding: 1rem;
+      width: 100%;
+      height: 60px;
+      background-color: #f9fcfe;
+      position: fixed;
+      top: 0;
+    "
+  >
+  </div>
+  <form class="login_form" [formGroup]="form">
+    <h1 class="login_title">welcome</h1>
+    <p class="login_pharse">let's start</p>
+
+    <fieldset class="login_fieldset">
+      <input
+        type="email"
+        class="login_input_email"
+        formControlName="email"
+        #email
+      />
+
+      <span class="wrapper_password">
+        <input
           type="password"
           class="login_input_password"
           formControlName="password"
-          />
-          <ng-icon name="heroEyeSolid" #eye size="20" class="eyeSlash"></ng-icon>
+          #password
+        />
+        <span (click)="onShowHidePassword()">
+          <ng-icon
+            name="heroEyeSolid"
+            #eye
+            size="20"
+            class="eyeSlash"
+          ></ng-icon>
           <ng-icon
             name="heroEyeSlashSolid"
             size="20"
@@ -20,26 +44,28 @@
             class="eye"
           ></ng-icon>
         </span>
-  
-        <span class="login_wrapper">
-          <label class="login_label">
-            <input
-              type="checkbox"
-              class="login_input_checkbox"
-              formControlName="checkbox"
-            />
-            remember me
-          </label>
-          <a href="forgot" class="login forgot_password">forgot password</a>
-        </span>
-        <span class="wrapper_btn">
-          <button class="login_button" (click)="onLogin()">login</button>
-          <button class="login_signup" (click)="onRedirectSignup()">
-            sign up
-          </button>
-        </span>
-        <a href="home" class="login_back">back to home</a>
-      </fieldset>
-    </form>
-  </section>
-  
+      </span>
+
+      <span class="login_wrapper">
+        <label class="login_label">
+          <input
+            type="checkbox"
+            class="login_input_checkbox"
+            formControlName="checkbox"
+          />
+          remember me
+        </label>
+        <a href="parking/forgot" class="login forgot_password"
+          >forgot password</a
+        >
+      </span>
+      <span class="wrapper_btn">
+        <button class="login_button" (click)="onLogin()">login</button>
+        <button class="login_signup" (click)="onRedirectSignup()">
+          sign up
+        </button>
+      </span>
+      <a href="home" class="login_back">back to home</a>
+    </fieldset>
+  </form>
+</section>
