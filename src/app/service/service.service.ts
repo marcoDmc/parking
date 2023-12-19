@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../environment/environment';
+import { environment } from '../environment/environment.prod';
 import { ISignup } from '../interfaces/ISignup';
 import { ISignin } from '../interfaces/ISignin';
 import { IUpdatePhoto } from '../interfaces/IUpdatePhoto';
