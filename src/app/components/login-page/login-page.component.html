@@ -9,63 +9,60 @@
       position: fixed;
       top: 0;
     "
-  >
-  </div>
+  ></div>
   <form class="login_form" [formGroup]="form">
     <h1 class="login_title">welcome</h1>
     <p class="login_pharse">let's start</p>
 
-    <fieldset class="login_fieldset">
+    <div class="wrapper_email">
       <input
         type="email"
         class="login_input_email"
         formControlName="email"
         #email
       />
+    </div>
 
-      <span class="wrapper_password">
+    <span class="wrapper_password">
+      <input
+        type="password"
+        class="login_input_password"
+        formControlName="password"
+        #password
+      />
+      <span (click)="onShowHidePassword()">
+        <ng-icon name="heroEyeSolid" #eye size="20" class="eyeSlash"></ng-icon>
+        <ng-icon
+          name="heroEyeSlashSolid"
+          size="20"
+          #eyeSlash
+          class="eye"
+        ></ng-icon>
+      </span>
+    </span>
+
+    <span class="login_wrapper">
+      <label class="login_label">
         <input
-          type="password"
-          class="login_input_password"
-          formControlName="password"
-          #password
+          type="checkbox"
+          class="login_input_checkbox"
+          formControlName="checkbox"
         />
-        <span (click)="onShowHidePassword()">
-          <ng-icon
-            name="heroEyeSolid"
-            #eye
-            size="20"
-            class="eyeSlash"
-          ></ng-icon>
-          <ng-icon
-            name="heroEyeSlashSolid"
-            size="20"
-            #eyeSlash
-            class="eye"
-          ></ng-icon>
-        </span>
-      </span>
-
-      <span class="login_wrapper">
-        <label class="login_label">
-          <input
-            type="checkbox"
-            class="login_input_checkbox"
-            formControlName="checkbox"
-          />
-          remember me
-        </label>
-        <a href="parking/forgot" class="login forgot_password"
-          >forgot password</a
-        >
-      </span>
-      <span class="wrapper_btn">
-        <button class="login_button" (click)="onLogin()">login</button>
-        <button class="login_signup" (click)="onRedirectSignup()">
-          sign up
-        </button>
-      </span>
-      <a href="home" class="login_back">back to home</a>
-    </fieldset>
+        remember me
+      </label>
+      <a href="parking/forgot" class="login forgot_password">forgot password</a>
+    </span>
+    <span class="wrapper_btn">
+      <app-button name="login" className="button5" (click)="onLogin()"
+        >login</app-button
+      >
+      <app-button
+        name="sign up"
+        className="button6"
+        (click)="onRedirectSignup()"
+        >sign up</app-button
+      >
+    </span>
+    <a href="home" class="login_back">back to home</a>
   </form>
 </section>

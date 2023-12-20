@@ -1,21 +1,23 @@
 @import "../../sass/variables.scss";
 .form_section {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
   display: grid;
   place-items: center;
   justify-content: center;
-  background-color: $white;
+  background-color: transparent;
   overflow: hidden;
+  margin: 0 auto;
 
   .login_form {
-    height: 100%;
-    max-height: 350px;
     width: 100%;
-    min-width: 400px;
-    display: grid;
-    place-items: center;
-    padding: 1rem 0;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
     gap: 1rem;
     .login_title,
     .login_pharse {
@@ -24,172 +26,192 @@
     }
     .login_title {
       font-size: 2.2rem;
-      color: $blue;
+      color: $color_1;
+      &::first-letter {
+        color: $color_19;
+      }
     }
     .login_pharse {
       letter-spacing: 2px;
-      color: $gray;
+      color: $color_17;
       font-weight: 600;
+      letter-spacing: 2px;
     }
-    .login_fieldset {
-      display: flex;
-      flex-direction: column;
+    .wrapper_email {
+      max-width: 300px;
       width: 100%;
-      height: 100%;
+      background: linear-gradient(100deg, $color_2, $color_3, $color_4);
+      padding: 3px;
+      display: flex;
       align-items: center;
-      gap: 1.5rem;
-      border: none;
-
+      justify-content: center;
+      border-radius: 5px;
       input[type="email"] {
         width: 100%;
         outline: none;
         padding: 10px;
         appearance: none;
-        background: transparent;
+        background: $white;
         border: none;
         border-bottom: 1px solid $blue_medium;
         color: $gray;
         font-size: 1rem;
       }
-
-      .wrapper_password {
-        border:none;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid $blue_medium;
-
-        .eyeSlash {
-          display: none;
-        }
-        .eye {
-          display: flex;
-          cursor: pointer;
-        }
-
-        input[type="password"] ,input[type="text"] {
-          width: 100%;
-          outline: none;
-          padding: 10px;
-          appearance: none;
-          background: transparent;
-          border: none;
-          color: $gray;
-          font-size: 1rem;
-        }
-      }
+    }
+    .wrapper_password {
+      max-width: 300px;
+      width: 100%;
+      background: linear-gradient(100deg, $color_2, $color_3, $color_4);
+      padding: 3px;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      .login_wrapper {
+      border-radius: 5px;
+
+      .eyeSlash {
+        display: none;
+      }
+      .eye {
+        display: flex;
+        cursor: pointer;
+      }
+      span {
+        background-color: $white;
+        height: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        position: relative;
-        a {
-          text-wrap: nowrap;
-          width: 100%;
-          text-align: right;
-          font-size: 0.9rem;
-          font-weight: 400;
-          text-decoration: underline;
-          color: $blue_medium2;
-
-          &:active {
-            color: $red_light;
-          }
-        }
-        .login_label {
-          display: flex;
-          align-items: center;
-          justify-content: left;
-          font-size: 0.8rem;
-          text-wrap: nowrap;
-          width: 100%;
-          text-align: left;
-          text-transform: capitalize;
-          input[type="checkbox"] {
-            width: 40px;
-            position: relative;
-
-            &::after {
-              content: "remember me";
-              width: 150px;
-              height: 10px;
-              position: absolute;
-              right: 0;
-            }
-          }
-        }
+        justify-content: center;
+        padding: 0 5px 0 0;
       }
 
-      .forgot_password {
-        font-size: 0.6rem;
+      input[type="password"],
+      input[type="text"] {
+        width: 100%;
+        outline: none;
+        padding: 10px;
+        appearance: none;
+        background: $white;
+        border: none;
+        border-bottom: 1px solid $blue_medium;
+        color: $gray;
+        font-size: 1rem;
+      }
+    }
+    justify-content: center;
+    .login_wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      position: relative;
+      a {
+        text-wrap: nowrap;
         width: 100%;
         text-align: right;
-        text-transform: capitalize;
+        font-size: 0.9rem;
         font-weight: 400;
-        animation: 0.3s ease;
+        text-decoration: underline;
+        color: $blue_medium2;
 
         &:active {
           color: $red_light;
         }
+      }
+      .login_label {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        font-size: 0.8rem;
+        text-wrap: nowrap;
+        width: 100%;
+        text-align: left;
+        text-transform: capitalize;
+        input[type="checkbox"] {
+          width: 40px;
+          position: relative;
 
-        &:hover {
-          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-          opacity: 0.7;
+          &::after {
+            content: "remember me";
+            width: 150px;
+            height: 10px;
+            position: absolute;
+            right: 0;
+          }
         }
       }
     }
-    .wrapper_btn {
-      display: flex;
+
+    .forgot_password {
+      font-size: 0.6rem;
       width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
+      text-align: right;
+      text-transform: capitalize;
+      font-weight: 400;
+      animation: 0.3s ease;
 
-      button {
-        width: 150px;
-        padding: 10px;
-        border: none;
-        border-radius: 6px;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 600;
-        outline: none;
-        transition: 0.3s ease;
-        cursor: pointer;
+      &:active {
+        color: $red_light;
+      }
 
-        &:hover {
-          opacity: 0.7;
-          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-          scale: 1.1;
-        }
-      }
-      .login_button {
-        background-color: $blue;
-        color: $white;
-        font-weight: 400;
-        text-transform: capitalize;
-        border: 2px solid $blue;
-        box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
-      }
-      .login_signup {
-        background-color: $white;
-        color: $black;
-        font-weight: 400;
-        text-transform: capitalize;
-        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+      &:hover {
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        opacity: 0.7;
       }
     }
   }
-  .login_back {
+  .wrapper_btn {
+    display: flex;
     width: 100%;
-    color: $white;
-    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 
-    &:hover {
-      transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-      opacity: 0.7;
+    button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      outline: none;
+      transition: 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.7;
+        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        scale: 1.1;
+      }
     }
+    .login_button {
+      background-color: $blue;
+      color: $white;
+      font-weight: 400;
+      text-transform: capitalize;
+      border: 2px solid $blue;
+      box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+    }
+    .login_signup {
+      background-color: $white;
+      color: $black;
+      font-weight: 400;
+      text-transform: capitalize;
+      box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  @media (max-width: 338px) {
+    max-width: 300px;
+  }
+}
+.login_back {
+  width: 100%;
+  color: $color_19;
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover {
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    opacity: 0.7;
   }
 }

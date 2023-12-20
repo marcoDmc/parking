@@ -21,8 +21,7 @@ export class LoginPageComponent implements OnInit {
   @ViewChild('email') email!: any;
   @ViewChild('password') pwd!: any;
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   protected form = this.formServiceBuilder.group({
     email: [''],
@@ -65,17 +64,17 @@ export class LoginPageComponent implements OnInit {
   onRedirectSignup = () => this.router.navigate(['parking/signup']);
 
   onShowHidePassword() {
-    if (this.show.changeDetector._lView[0].className == 'eye') {
-      this.show.changeDetector._lView[0].removeAttribute('class');
-      this.show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      this.hide.changeDetector._lView[0].removeAttribute('class');
-      this.hide.changeDetector._lView[0].setAttribute('class', 'eye');
+    if (this.show.elementRef.nativeElement.className == 'eye') {
+      this.show.elementRef.nativeElement.removeAttribute('class');
+      this.show.elementRef.nativeElement.setAttribute('class', 'eyeSlash');
+      this.hide.elementRef.nativeElement.removeAttribute('class');
+      this.hide.elementRef.nativeElement.setAttribute('class', 'eye');
       methods.showHidePassword(this.pwd);
     } else {
-      this.hide.changeDetector._lView[0].removeAttribute('class');
-      this.hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      this.show.changeDetector._lView[0].removeAttribute('class');
-      this.show.changeDetector._lView[0].setAttribute('class', 'eye');
+      this.hide.elementRef.nativeElement.removeAttribute('class');
+      this.hide.elementRef.nativeElement.setAttribute('class', 'eyeSlash');
+      this.show.elementRef.nativeElement.removeAttribute('class');
+      this.show.elementRef.nativeElement.setAttribute('class', 'eye');
       methods.showHidePassword(this.pwd);
     }
   }
