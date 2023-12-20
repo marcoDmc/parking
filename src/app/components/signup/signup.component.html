@@ -1,13 +1,3 @@
-<div
-  class="card"
-  style="
-    padding: 1rem;
-    width: 100%;
-    height: 60px;
-    background-color: #f9fcfe;
-    position: fixed;
-  "
-></div>
 <section class="signup_section">
   <form class="signup_form" [formGroup]="form">
     <h1 class="signup_title">register</h1>
@@ -16,7 +6,7 @@
     </p>
 
     <fieldset class="signup_fieldset">
-      <span>
+      <div>
         <input
           type="text"
           class="signup_input"
@@ -24,6 +14,8 @@
           formControlName="nickname"
           #nickname
         />
+      </div>
+      <div>
         <input
           type="text"
           class="signup_input"
@@ -31,19 +23,26 @@
           formControlName="fullname"
           #fullname
         />
+      </div>
+      <div>
         <input
           type="tel"
           class="signup_input"
           placeholder="phone"
           formControlName="phone"
           #phone
-        /><input
+        />
+      </div>
+      <div>
+        <input
           type="email"
           class="signup_input"
           placeholder="email"
           formControlName="email"
           #email
         />
+      </div>
+      <div>
         <input
           type="text"
           class="signup_input"
@@ -51,6 +50,8 @@
           formControlName="cpf"
           #cpf
         />
+      </div>
+      <div>
         <input
           type="text"
           placeholder="address"
@@ -58,55 +59,55 @@
           class="signup_input"
           #address
         />
+      </div>
 
-        <span class="wrapper">
-          <input
-            type="password"
-            class="signup_input"
-            placeholder="password"
-            formControlName="password"
-            #password
-          />
-          <span (click)="onShowHideLastPassword()">
-            <ng-icon
-              name="heroEyeSolid"
-              class="eyeSlash"
-              size="20"
-              #eye
-            ></ng-icon>
-            <ng-icon
-              name="heroEyeSlashSolid"
-              size="20"
-              class="eye"
-              #eyeSlash
-            ></ng-icon>
-          </span>
+      <div class="wrapperPwd">
+        <input
+          type="password"
+          class="signup_input"
+          placeholder="password"
+          formControlName="password"
+          #password
+        />
+        <span (click)="onShowHideLastPassword()">
+          <ng-icon
+            name="heroEyeSolid"
+            class="eyeSlash"
+            size="20"
+            #eye
+          ></ng-icon>
+          <ng-icon
+            name="heroEyeSlashSolid"
+            size="20"
+            class="eye"
+            #eyeSlash
+          ></ng-icon>
         </span>
+      </div>
 
-        <span class="wrapper">
-          <input
-            type="password"
-            class="signup_input_confirm"
-            placeholder="confirm password"
-            formControlName="confirmPassword"
-            #passwordConfirm
-          />
-          <span (click)="onShowHideNewPassword()">
-            <ng-icon
-              name="heroEyeSolid"
-              class="eyeSlash"
-              size="20"
-              #eyes
-            ></ng-icon>
-            <ng-icon
-              name="heroEyeSlashSolid"
-              size="20"
-              class="eye"
-              #eyesSlash
-            ></ng-icon>
-          </span>
+      <div class="wrapperPwdConfirm">
+        <input
+          type="password"
+          class="signup_input_confirm"
+          placeholder="confirm password"
+          formControlName="confirmPassword"
+          #passwordConfirm
+        />
+        <span (click)="onShowHideNewPassword()">
+          <ng-icon
+            name="heroEyeSolid"
+            class="eyeSlash"
+            size="20"
+            #eyes
+          ></ng-icon>
+          <ng-icon
+            name="heroEyeSlashSolid"
+            size="20"
+            class="eye"
+            #eyesSlash
+          ></ng-icon>
         </span>
-      </span>
+      </div>
 
       <span class="signup_wrapper_btn">
         <app-button

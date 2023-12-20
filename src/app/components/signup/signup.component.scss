@@ -9,7 +9,11 @@
   background-color: $white;
   padding: 1rem 0 0 0;
   gap: 1rem;
-  overflow:none;
+  overflow: none;
+  @media (max-width: 464px) {
+    place-items: start;
+    justify-content: center;
+  }
   .signup_form {
     width: 100%;
     height: 100%;
@@ -22,7 +26,7 @@
 
     .signup_title {
       font-size: 2.2rem;
-      color: $blue;
+      color: $color_1;
       width: 100%;
       text-align: center;
     }
@@ -30,47 +34,85 @@
       width: 100%;
       text-align: center;
       overflow-wrap: break-word;
-      color: $gray;
+      color: $color_17;
     }
 
     .signup_fieldset {
       border: none;
       width: 100%;
       height: 100%;
-      span {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        .signup_input,
-        .signup_input_confirm {
-          background: $white;
-          width: 100%;
-          border: none;
-          outline: none;
-          padding: 10px;
-          color: $black;
-          font-size: 1rem;
-          text-align: left;
-          border-bottom: 2px solid $blue_medium2;
-        }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
 
-        .wrapper {
+      div {
+        max-width: 300px;
+        width: 100%;
+        background: linear-gradient(100deg, $color_2, $color_3, $color_4);
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+        input {
+          width: 100%;
+          max-width: 300px;
+          height: 100%;
+          background-color: $white;
+          outline: none;
           border: none;
+          letter-spacing: 2px;
+          padding: 10px;
+          font-weight: normal;
+          color: $black;
+        }
+      }
+
+      .wrapperPwd,
+      .wrapperPwdConfirm {
+        border: none;
+        display: flex;
+        align-items: center;
+        max-width: 300px;
+        width: 100%;
+        background: linear-gradient(100deg, $color_2, $color_3, $color_4);
+        padding: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+        input {
+          width: 100%;
+          max-width: 300px;
+          height: 100%;
+          background-color: $white;
+          outline: none;
+          border: none;
+          letter-spacing: 2px;
+          padding: 10px;
+          font-weight: normal;
+          color: $black;
+        }
+        span {
+          background-color: $white;
+          height: 100%;
           display: flex;
           align-items: center;
-          border-bottom: 2px solid $blue_medium2;
-
-          .eye {
-            display: flex;
-            cursor: pointer;
-          }
-          .eyeSlash {
-            display: none;
-          }
-          input[type="password"],
-          input[type="text"] {
-            border: none;
-          }
+          justify-content: center;
+          padding: 0 5px 0 0;
+        }
+        .eye {
+          display: flex;
+          cursor: pointer;
+        }
+        .eyeSlash {
+          display: none;
+        }
+        input[type="password"],
+        input[type="text"] {
+          border: none;
         }
       }
 
@@ -82,26 +124,6 @@
         grid-column: 1/2;
         margin-top: 1rem;
 
-        button {
-          grid-column: 1/2;
-          width: 100%;
-          max-width: 200px;
-          padding: 10px;
-          font-size: 1rem;
-          text-transform: uppercase;
-          font-weight: 600;
-          border: none;
-          outline: none;
-          cursor: pointer;
-          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-          background-color: $blue;
-          color: $white;
-
-          &:hover {
-            transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-            scale: 1.1;
-          }
-        }
         span {
           grid-column: 1/2;
           font-size: 0.8rem;
@@ -109,7 +131,44 @@
 
           a {
             text-transform: capitalize;
+            color: $color_19;
+
+            &:hover {
+              opacity: 0.7;
+              transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
           }
+        }
+      }
+    }
+
+    @media (max-width: 464px) {
+      gap: 1rem;
+      max-width: 350px;
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      .signup_title {
+        font-size: 1.5rem;
+      }
+
+      .signup_pharse {
+        font-size: 0.9rem;
+      }
+      .signup_fieldset {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.4rem 0 0 0;
+        .signup_wrapper_btn {
+          width: 100%;
+          max-width: 300px;
+          gap: 0.4rem;
         }
       }
     }
