@@ -29,6 +29,11 @@
       color: $color_1;
       width: 100%;
       text-align: center;
+      text-transform: capitalize;
+
+      &::first-letter {
+        color: $color_19;
+      }
     }
     .signup_pharse {
       width: 100%;
@@ -132,6 +137,10 @@
           a {
             text-transform: capitalize;
             color: $color_19;
+
+            &:active {
+              color: $color_1;
+            }
 
             &:hover {
               opacity: 0.7;

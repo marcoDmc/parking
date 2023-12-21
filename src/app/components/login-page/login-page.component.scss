@@ -1,23 +1,21 @@
 @import "../../sass/variables.scss";
 .form_section {
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   height: 100%;
-  display: grid;
-  place-items: center;
-  justify-content: center;
+  display: flex;
   background-color: transparent;
   overflow: hidden;
   margin: 0 auto;
+  padding: .8rem;
 
   .login_form {
     width: 100%;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 1rem;
     gap: 1rem;
     .login_title,
     .login_pharse {
@@ -38,7 +36,6 @@
       letter-spacing: 2px;
     }
     .wrapper_email {
-      max-width: 300px;
       width: 100%;
       background: linear-gradient(100deg, $color_2, $color_3, $color_4);
       padding: 3px;
@@ -53,13 +50,11 @@
         appearance: none;
         background: $white;
         border: none;
-        border-bottom: 1px solid $blue_medium;
         color: $gray;
         font-size: 1rem;
       }
     }
     .wrapper_password {
-      max-width: 300px;
       width: 100%;
       background: linear-gradient(100deg, $color_2, $color_3, $color_4);
       padding: 3px;
@@ -72,16 +67,16 @@
         display: none;
       }
       .eye {
-        display: flex;
         cursor: pointer;
       }
-      span {
+      div {
         background-color: $white;
         height: 100%;
+        min-height: 39px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 5px 0 0;
+        padding: 0 4px 0 0;
       }
 
       input[type="password"],
@@ -92,8 +87,7 @@
         appearance: none;
         background: $white;
         border: none;
-        border-bottom: 1px solid $blue_medium;
-        color: $gray;
+        color: $color_1;
         font-size: 1rem;
       }
     }
@@ -111,10 +105,10 @@
         font-size: 0.9rem;
         font-weight: 400;
         text-decoration: underline;
-        color: $blue_medium2;
+        color: $color_19;
 
         &:active {
-          color: $red_light;
+          color: $color_1;
         }
       }
       .login_label {
@@ -139,23 +133,20 @@
           }
         }
       }
-    }
 
-    .forgot_password {
-      font-size: 0.6rem;
-      width: 100%;
-      text-align: right;
-      text-transform: capitalize;
-      font-weight: 400;
-      animation: 0.3s ease;
+      .forgot_password {
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: right;
+        text-transform: capitalize;
+        font-weight: 400;
+        animation: 0.3s ease;
+        color: $color_19;
 
-      &:active {
-        color: $red_light;
-      }
-
-      &:hover {
-        transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
-        opacity: 0.7;
+        &:hover {
+          transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+          opacity: 0.7;
+        }
       }
     }
   }
@@ -165,7 +156,9 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-
+    @media (max-width: 356px) {
+      flex-direction: column;
+    }
     button {
       width: 150px;
       padding: 10px;
@@ -209,6 +202,10 @@
   width: 100%;
   color: $color_19;
   transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  @media (max-width: 356px) {
+    text-align: center;
+  }
 
   &:hover {
     transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
