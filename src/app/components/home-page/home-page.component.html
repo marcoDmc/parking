@@ -87,53 +87,10 @@
   <section class="home_section_3">
     <div class="testimonial" (scroll)="onScroll($event)">
       <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-      business and achieve success. With [Tool Name], you can automate
-      tasks, improve productivity, and drive growth for your business."
-      ></app-testimonial-card>
-      <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-      business and achieve success. With [Tool Name], you can automate
-      tasks, improve productivity, and drive growth for your business."
-      ></app-testimonial-card>
-      <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-      business and achieve success. With [Tool Name], you can automate
-      tasks, improve productivity, and drive growth for your business."
-      ></app-testimonial-card>
-      <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-      business and achieve success. With [Tool Name], you can automate
-      tasks, improve productivity, and drive growth for your business."
-      ></app-testimonial-card>
-      <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-      business and achieve success. With [Tool Name], you can automate
-      tasks, improve productivity, and drive growth for your business."
-      ></app-testimonial-card>
-      <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-    business and achieve success. With [Tool Name], you can automate
-    tasks, improve productivity, and drive growth for your business."
-      ></app-testimonial-card>
-      <app-testimonial-card
-        name="Parking is the tech tool"
-        src="../../../assets/parking-1.png"
-        pharse="Parking is the tech tool that offers everything you need to boost your
-  business and achieve success. With [Tool Name], you can automate
-  tasks, improve productivity, and drive growth for your business."
+        *ngFor="let person of testimonial"
+        [name]="person.name"
+        [pharse]="person.pharse"
+        [src]="person.url"
       ></app-testimonial-card>
     </div>
   </section>

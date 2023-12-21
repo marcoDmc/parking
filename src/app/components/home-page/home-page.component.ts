@@ -1,5 +1,6 @@
 import { Component, Input, ViewChild, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { person } from '../../mock/testimonials';
 
 @Component({
   selector: 'app-home-page',
@@ -8,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HomePageComponent {
   private router = inject(Router);
+  testimonial: any = person;
 
   @Input() onRedirectLoginPage = () => this.router.navigate(['parking/signin']);
   @ViewChild('scrolling') scrooling!: any;
@@ -27,7 +29,7 @@ export class HomePageComponent {
   onRedirectDashboard = () => {
     this.router.navigate(['dashboard']);
   };
-  onScroll(event:any) {
+  onScroll(event: any) {
     console.log(event);
   }
 }
