@@ -5,7 +5,6 @@ import { NgIconsModule } from '@ng-icons/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 import {
   heroEyeSlashSolid,
   heroEyeSolid,
@@ -85,7 +84,7 @@ import { TestimonialCardComponent } from './shared/testimonial-card/testimonial-
     SettingsPageComponent,
     NotificationPageComponent,
     CardComponent,
-    TestimonialCardComponent
+    TestimonialCardComponent,
   ],
   imports: [
     BrowserModule,
