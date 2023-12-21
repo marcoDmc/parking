@@ -15,7 +15,7 @@ export class ForgotPasswordComponent implements OnInit {
   protected router = inject(Router);
 
   name: string = 'update';
-  className: string = 'button4';
+  className: string = 'button6';
   status: boolean | undefined;
   path: string = 'parking/signup';
 
@@ -72,33 +72,33 @@ export class ForgotPasswordComponent implements OnInit {
   onRedirectLogin = () => this.router.navigate(['signup']);
 
   onShowHideLastPassword() {
-    if (this.shows.changeDetector._lView[0].className == 'eye') {
-      this.shows.changeDetector._lView[0].removeAttribute('class');
-      this.shows.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      this.hides.changeDetector._lView[0].removeAttribute('class');
-      this.hides.changeDetector._lView[0].setAttribute('class', 'eye');
+    if (this.shows.elementRef.nativeElement.className == 'eye') {
+      this.shows.elementRef.nativeElement.removeAttribute('class');
+      this.shows.elementRef.nativeElement.setAttribute('class', 'eyeSlash');
+      this.hides.elementRef.nativeElement.removeAttribute('class');
+      this.hides.elementRef.nativeElement.setAttribute('class', 'eye');
       methods.showHidePassword(this.pwd);
     } else {
-      this.hides.changeDetector._lView[0].removeAttribute('class');
-      this.hides.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      this.shows.changeDetector._lView[0].removeAttribute('class');
-      this.shows.changeDetector._lView[0].setAttribute('class', 'eye');
+      this.hides.elementRef.nativeElement.removeAttribute('class');
+      this.hides.elementRef.nativeElement.setAttribute('class', 'eyeSlash');
+      this.shows.elementRef.nativeElement.removeAttribute('class');
+      this.shows.elementRef.nativeElement.setAttribute('class', 'eye');
       methods.showHidePassword(this.pwd);
     }
   }
 
   onShowHideNewPassword() {
-    if (this.show.changeDetector._lView[0].className == 'eye') {
-      this.show.changeDetector._lView[0].removeAttribute('class');
-      this.show.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      this.hide.changeDetector._lView[0].removeAttribute('class');
-      this.hide.changeDetector._lView[0].setAttribute('class', 'eye');
+    if (this.show.elementRef.nativeElement.className == 'eye') {
+      this.show.elementRef.nativeElement.removeAttribute('class');
+      this.show.elementRef.nativeElement.setAttribute('class', 'eyeSlash');
+      this.hide.elementRef.nativeElement.removeAttribute('class');
+      this.hide.elementRef.nativeElement.setAttribute('class', 'eye');
       methods.showHidePassword(this.newPwd);
     } else {
-      this.hide.changeDetector._lView[0].removeAttribute('class');
-      this.hide.changeDetector._lView[0].setAttribute('class', 'eyeSlash');
-      this.show.changeDetector._lView[0].removeAttribute('class');
-      this.show.changeDetector._lView[0].setAttribute('class', 'eye');
+      this.hide.elementRef.nativeElement.removeAttribute('class');
+      this.hide.elementRef.nativeElement.setAttribute('class', 'eyeSlash');
+      this.show.elementRef.nativeElement.removeAttribute('class');
+      this.show.elementRef.nativeElement.setAttribute('class', 'eye');
       methods.showHidePassword(this.newPwd);
     }
   }
